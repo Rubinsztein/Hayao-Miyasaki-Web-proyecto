@@ -1,0 +1,753 @@
+@import "./base/variables";
+@import "./base/maps";
+@import "./base/mixin";
+@import "./base/extend";
+@import "./componentes/index";
+@import "./componentes/galeria";
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* filmografia  */
+
+.body-filmografia {
+    background-image: url(../imagenes/posible-imagen-filmografia-2.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+.caratulas {
+    display: flex;
+    margin: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    .caratula {
+        display: flex;
+        margin: 30px;
+        margin-right: 50px;
+        margin-left: 50px;
+        
+    }
+    .caratula-img{
+        width: 400px;
+        &:hover{
+            width: 407px;
+            transition: 0.2s;
+        }
+    }
+}
+
+/* formulario */
+.formulario-ghibli{
+    background-color: rgb(203, 147, 207); 
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.boton-formulario{
+    color: black;
+    background-color: rgb(127, 204, 255); ;
+}
+
+/* biografia */
+
+.body-biografia {
+    background-image: url(../imagenes/posible-fondo-biografia-3.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.titulo-bio {
+    text-align: center;
+    font-size: 50px;
+    color: blue;
+    margin: 20px;
+}
+
+.bio {
+    font-size: 30px;
+    margin: 40px;
+}
+
+.biografia {
+    width: 100%;
+    margin: auto;
+    .img-bio {
+        margin: 40px;
+        width: 700px;
+        float: left;
+    }
+    .texto-bio-miyasaki {
+        @include text-bio ();
+    }
+}
+
+.documentales-miyasaki-container {
+    .titulo-documentales {
+        margin-top: 70px;
+        margin-bottom: 40px;
+        margin-left: 30px;  
+    }
+    .doc-y-ent {
+        display: flex;
+        justify-content: space-evenly;
+        .proceso-creativo {
+            flex-direction: column;  
+        }
+        .tit-proceso-creativo {
+            margin-left: 50px;
+            margin-top: 0px;   
+        }
+        .video-proceso {
+            margin: 30px;   
+            width: 700px;
+            height: 415px;
+        }
+    }
+}
+
+
+
+
+/* aca empieza pagina soundtrack */
+.soundtrack-body{
+    background-image: url(../imagenes/soundtrack-posible-fondo.jpg);
+    background-attachment: fixed;     
+}
+.joe-hisaishi {
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 40px;
+    color: rgb(52, 85, 236);
+    font-size: 50px;
+}
+.bio-hisaishi {
+    font-size: 30px;
+    margin: 40px;
+    color: azure;
+}
+.texto-bio-hisaishi {
+    font-size: 20px;
+    margin-left: 30px;
+    color: aliceblue;
+}
+.tit-proceso-creativo-hisaishi {
+    margin-left: 50px;
+    margin-top: 0px; 
+    color: azure;  
+}
+.titulo-documentales-hisaishi {
+    margin-top: 70px;
+    margin-bottom: 40px;
+    margin-left: 30px; 
+    color: azure; 
+}
+
+/* nausica */
+
+.nausica-body {
+    background-color: rgb(23, 64, 88);
+}
+
+.titulo-pelicula {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 40px;
+}
+.titulo-pelicula-nausica{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 40px;
+    color: rgb(127, 204, 255);
+}
+
+
+.img-text-pelicula{
+    width: 500px;
+    margin: 25px;
+    float: left;
+}
+
+.argumento-pelicula {
+    font-size: 35px;
+    margin-top: 25px;
+    margin-left: 30px;
+}
+.argumento-pelicula-nausica {
+    font-size: 35px;
+    margin-top: 25px;
+    margin-left: 30px;
+    color: rgb(127, 204, 255);
+}
+
+.texto-nausica {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+    
+}
+.texto-nausica-blanco {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(217, 222, 241);
+    margin-left: 20px;
+}
+
+.info-general{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+}
+.info-general-nausica{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+    color: rgb(127, 204, 255);
+}
+
+.img-info-general {
+    text-align: center;
+    margin-top: 30px;
+}
+.img-info{
+    width: 500px;
+}
+.lista-info{
+    list-style: none;
+}
+.list-info-general {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    
+} 
+
+.titulos-trailers {
+    margin: 50px;
+    font-size: 30px;
+}
+.titulos-trailers-nausica {
+    margin: 50px;
+    font-size: 30px;
+    color: rgb(127, 204, 255);
+}
+
+.trailers-videos {
+    text-align: center;
+}
+.trailer{
+    width: 800px;
+    height: 415px;
+}
+
+
+/* howl */
+
+.howl-body {
+    background-color: rgb(51, 1, 51);
+}
+.titulo-pelicula-howl{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 40px;
+    color: rgb(63, 65, 212);
+}
+.argumento-pelicula-howl {
+    font-size: 35px;
+    margin-top: 25px;
+    margin-left: 30px;
+    color: rgb(63, 65, 212);
+}
+.info-general-howl{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+    color: rgb(63, 65, 212);
+}
+.list-info-general-howl {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: rgb(217, 222, 241);
+}
+.titulos-trailers-howl {
+    margin: 50px;
+    font-size: 30px;
+    color: rgb(63, 65, 212);
+}
+
+/* chihiro */
+
+.chihiro-body {
+    background-color: black;
+}
+.titulo-pelicula-chihiro{
+    @extend .titulo-pelicula-howl;
+    color: rgb(180, 28, 7);   
+}
+.texto-nausica-chihiro {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(219, 207, 31);
+    margin-left: 20px;
+}
+.argumento-pelicula-chihiro {
+    font-size: 35px;
+    margin-top: 25px;
+    margin-left: 30px;
+    color: rgb(180, 28, 7);
+}
+.info-general-chihiro{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+    color: rgb(180, 28, 7);
+}
+.list-info-general-chihiro {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: rgb(219, 207, 31);
+}
+.titulos-trailers-chihiro {
+    margin: 50px;
+    font-size: 30px;
+    color: rgb(180, 28, 7);
+}
+
+
+/* castle in the sky */
+
+.laputa-body {
+    background-color: rgb(2, 43, 90);
+}
+.titulo-pelicula-castle{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 40px;
+    color: rgb(49, 209, 148);
+}
+.texto-nausica-castle {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+}
+.argumento-pelicula-castle {
+    font-size: 35px;
+    margin-top: 25px;
+    margin-left: 30px;
+    color: rgb(49, 209, 148);
+}
+.info-general-castle{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+    color: rgb(49, 209, 148);
+}
+.list-info-general-castle {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+.titulos-trailers-castle {
+    margin: 50px;
+    font-size: 30px;
+    color: rgb(49, 209, 148);
+}
+
+/* mononoke */
+.mononoke-body {
+    background-color: rgb(7, 31, 1);
+}
+.titulo-pelicula-mononoke{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 40px;
+    color: rgb(245, 0, 0);
+}
+.texto-nausica-mononoke {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+}
+.argumento-pelicula-mononoke {
+    font-size: 35px;
+    margin-top: 25px;
+    margin-left: 30px;
+    color: rgb(245, 0, 0);
+}
+.info-general-mononoke{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+    color: rgb(245, 0, 0);
+}
+.list-info-general-mononoke {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+.titulos-trailers-mononoke {
+    margin: 50px;
+    font-size: 30px;
+    color: rgb(245, 0, 0);
+}
+/* totoro */
+.totoro-body {
+    background-color: rgb(52, 65, 100);
+}
+.titulo-pelicula-totoro{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 40px;
+    color: rgb(7, 4, 165);
+}
+.texto-nausica-totoro {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+}
+.argumento-pelicula-totoro {
+    font-size: 35px;
+    margin-top: 25px;
+    margin-left: 30px;
+    color: rgb(7, 4, 165);
+}
+.info-general-totoro {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+    color: rgb(7, 4, 165);
+}
+.list-info-general-totoro {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+.titulos-trailers-totoro {
+    margin: 50px;
+    font-size: 30px;
+    color: rgb(7, 4, 165);
+}
+
+/* the rises wind */
+.wind-body {
+    background-color: rgb(58, 160, 228);
+}
+.titulo-pelicula-wind {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 40px;
+    color: rgb(194, 94, 172);
+}
+.texto-nausica-wind {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+}
+.argumento-pelicula-wind {
+    font-size: 35px;
+    margin-top: 25px;
+    margin-left: 30px;
+    color: rgb(194, 94, 172);
+}
+.info-general-wind {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+    color: rgb(194, 94, 172);
+}
+.list-info-general-wind {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+.titulos-trailers-wind {
+    margin: 50px;
+    font-size: 30px;
+    color: rgb(194, 94, 172);
+}
+/* porco rosso */
+.rosso-body {
+    background-color: rgb(167, 236, 245);
+}
+.titulo-pelicula-rosso {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 40px;
+    color: rgb(207, 211, 7);
+}
+.texto-nausica-rosso {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+}
+.argumento-pelicula-rosso {
+    font-size: 35px;
+    margin-top: 25px;
+    margin-left: 30px;
+    color: rgb(207, 211, 7);
+}
+.info-general-rosso {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+    color: rgb(207, 211, 7);
+}
+.list-info-general-rosso {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+.titulos-trailers-rosso {
+    margin: 50px;
+    font-size: 30px;
+    color: rgb(207, 211, 7);
+}
+/* kiki */
+.kiki-body {
+    background-color: rgb(0, 3, 182);
+}
+.titulo-pelicula-kiki {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 40px;
+    color: rgb(211, 14, 7);
+}
+.texto-nausica-kiki {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+}
+.argumento-pelicula-kiki {
+    font-size: 35px;
+    margin-top: 25px;
+    margin-left: 30px;
+    color: rgb(211, 14, 7);
+}
+.info-general-kiki {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+    color: rgb(211, 14, 7);
+}
+.list-info-general-kiki {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+.titulos-trailers-kiki {
+    margin: 50px;
+    font-size: 30px;
+    color: rgb(211, 14, 7);
+}
+/* ponyo */
+.ponyo-body {
+    background-color: rgb(75, 218, 170);
+}
+.titulo-pelicula-ponyo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 40px;
+    color: rgb(199, 144, 25);
+}
+.texto-nausica-ponyo {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+}
+.argumento-pelicula-ponyo {
+    font-size: 35px;
+    margin-top: 25px;
+    margin-left: 30px;
+    color: rgb(199, 144, 25);
+}
+.info-general-ponyo {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+    color: rgb(199, 144, 25);
+}
+.list-info-general-ponyo {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+.titulos-trailers-ponyo {
+    margin: 50px;
+    font-size: 30px;
+    color: rgb(199, 144, 25);
+}
+/* media queries */
+
+@media only screen and (max-width: 576px) {
+
+    .body1{
+        background-image: url(../imagenes/fondo-index-mobile.jpg);
+        background-attachment: fixed;
+    }
+
+    /* header/index */
+    header{
+        .container-nav{
+            
+            .img-nav-img {
+                width: 125px;
+                height: 70px;
+                border-radius: 10%;
+            }
+            .navbar-brand{
+                font-size: 25px;
+            }
+           
+        }
+    
+    }
+    .img-portada{
+        width: 400px;
+        border-radius: 7%;
+    }
+
+    /* footer */
+    footer {
+        .footer-items {
+            font-size: 15px;   
+            .item-footer{
+                margin-top: 30px;
+            }
+            i{
+                font-size: 15px;
+            }
+            .footer-img{
+                width: 125px;
+                height: 70px;
+                border-radius: 10%;
+            }
+            .img-footer-li{
+                margin: 7px;
+            }
+        }
+    }
+    /* filmografia */
+
+    .caratula-img{
+        width: 140px;
+    }
+
+    /* galeria */
+
+
+    /* biografia */
+    .body-biografia {
+        background-image: none;
+        background-color: rgb(105, 209, 209);
+    }
+    .titulo-bio {
+        font-size: 30px;
+    }
+    
+    .bio {
+        font-size: 25px;
+    }
+    
+    .biografia {
+        .img-bio {
+            width: 400px;
+        }
+        .texto-bio-miyasaki {
+            margin-right: 30px;
+            font-size: 21px;
+        }
+    }
+    
+    .documentales-miyasaki-container {
+        .titulo-documentales {
+            margin-top: 70px;
+            margin-bottom: 40px;
+            margin-left: 30px;  
+        }
+        .doc-y-ent {
+            flex-direction: column;
+            .proceso-creativo {
+                flex-direction: column;  
+            }
+            .tit-proceso-creativo {
+                margin-left: 50px;
+                margin-top: 0px;   
+            }
+            .video-proceso {
+                width: 400px;
+                height: 250px;   
+            }
+        }
+    }
+/* soundtrack */
+
+.soundtrack-body{
+    background-image: url(../imagenes/soundtrack-posible-fondo.jpg);
+    background-attachment: fixed;     
+}
+    
+    /* nausicaa */
+
+    .titulo-pelicula{
+        font-size: 40px;
+    }
+    .img-text-pelicula{
+        width: 150px;
+    }
+    .img-info{
+        width: 300px;
+    }
+    .trailer{
+        width: 450px;
+        height: 250px;
+    }
+
+
+}
+
+
+
+
+
+
+

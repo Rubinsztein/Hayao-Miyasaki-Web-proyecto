@@ -940,6 +940,16 @@ footer .footer-items .img-footer-li {
     width: 500px;
     border-radius: 7%;
   }
+  .img-text-pelicula{
+    width: 200px;
+  }
+  .trailer{
+    width: 450px;
+    height: 270px;
+  }
+  .img-info{
+    width: 250px;
+  }
 }
 @media only screen and (max-width: 576px) {
   .body1 {
@@ -958,6 +968,12 @@ footer .footer-items .img-footer-li {
   .img-portada {
     width: 370px;
     border-radius: 7%;
+  }
+  .texto-portada{
+    font-size: 17px;
+    border-radius: 1%;
+    margin-left: 100px;
+  margin-right: 100px;
   }
   /* footer */
   footer .footer-items {
@@ -978,8 +994,23 @@ footer .footer-items .img-footer-li {
     margin: 7px;
   }
   /* filmografia */
-  .caratula-img {
-    width: 140px;
+  .caratulas {
+    
+    margin: 20px;
+    
+  }
+  .caratulas .caratula {
+    
+    margin: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .caratulas .caratula-img {
+    width: 250px;
+  }
+  .caratulas .caratula-img:hover {
+    width: 307px;
+    transition: 0.2s;
   }
 
   /* biografia */
@@ -1026,19 +1057,24 @@ footer .footer-items .img-footer-li {
   }
   /* nausicaa */
   .titulo-pelicula {
-    font-size: 40px;
+    font-size: 20px;
+  }
+  .titulo{
+    font-size: 35px;
   }
   .img-text-pelicula {
     width: 150px;
   }
   .img-info {
-    width: 300px;
+    width: 250px;
   }
   .trailer {
-    width: 450px;
-    height: 250px;
+    width: 350px;
+    height: 220px;
  }
+  
 }
+
  
 
 /*# sourceMappingURL=style.css.map */
